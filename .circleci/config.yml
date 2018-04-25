@@ -47,6 +47,7 @@ jobs:
       #docker build image
       - run: 
           name: Build Docker
+          command: |
             docker build -t phpdrupal8:0 .
             docker login -u johnnyharper -p addweb@123
             docker push johnnyharper:latest
