@@ -46,7 +46,9 @@ jobs:
             mv /tmp/docker/* /usr/bin
 	
       #docker build image
-      - run: |
-          docker build -t phpdrupal8:0 .
-          docker login -u johnnyharper -p addweb@123
-          docker push johnnyharper:latest
+      - run: 
+          name : Build Docker
+          command: |
+            docker build -t phpdrupal8:0 .
+            docker login -u johnnyharper -p addweb@123
+            docker push johnnyharper:latest
